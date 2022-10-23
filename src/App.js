@@ -24,7 +24,7 @@ function App() {
         <label htmlFor="state">Estado:</label>
         <DropdownBrazilianStates onChange={handleInputChange}/>
       
-      <label htmlFor="city">Cidade:</label>
+      <label htmlFor="city">Cidade::</label>
        <DropdownBrazilianCities state={formValues.state}/>
         
       </form>

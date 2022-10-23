@@ -7,9 +7,11 @@ const DropdownBrazilianCities = ({state})=>{
     useEffect(()=>{
         fetchCitiesForState(state).then((cities)=>{
             setCities(cities)
+            
         })
 
     },[state])
+    
     return (
         <select id="city">
           <option value="">Selecione uma cidade...</option>
