@@ -15,7 +15,7 @@ const DropdownBrazilianStates = ({onChange =() =>{}})=>{
     
     return (
         <select id="state" name ="state" onChange={onChange}>
-          <option value="">Selecione um estado</option>
+          <option value="">Selecione um estado...</option>
           {states.map((state) =>{
             const{sigla, nome, id} = state;
             return(
