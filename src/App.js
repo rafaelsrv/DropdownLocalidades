@@ -2,6 +2,7 @@ import { useState } from 'react';
 import './App.css';
 import DropdownBrazilianStates from './components/Forms/DropdownBrazilianStates';
 import DropdownBrazilianCities from './components/Forms/DropdownBrazilianCities';
+import SearchButton from './components/SearchButton';
 
 
 function App() {
@@ -28,7 +29,7 @@ function App() {
        <DropdownBrazilianCities state={formValues.state}/>
         
       </form>
-        <button>Pesquisar!!</button>
+        
       
     </div>
   );

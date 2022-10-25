@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import { fetchCitiesForState } from "../../../helpers/ibge"
+import SearchButton from "../../SearchButton";
 
 
 
@@ -8,6 +9,10 @@ const DropdownBrazilianCities = ({state})=>{
     const [cities, setCities] = useState([]);
     
     
+    function procurar(e){
+      e.preventDefault()
+      setSearch(e.target.value)
+    }
 
     useEffect(()=>{
         fetchCitiesForState(state).then((cities)=>{
@@ -16,12 +21,12 @@ const DropdownBrazilianCities = ({state})=>{
         })
 
     },[state])
-    
+    console.log(search)
     
     return (
       <div>
-        {search}
-        <select onChange={e=>setSearch(e.target.value)} id="city">
+      
+        <select onChange={procurar} id="city">
           <option value="">Selecione uma cidade...</option>
           {cities.map((city)=>{
             const{id, nome} = city;
@@ -30,6 +35,7 @@ const DropdownBrazilianCities = ({state})=>{
           })
           }
         </select>
+         {search == false ? <div></div>  :<SearchButton City={search}/>}
         </div>
         
     )
