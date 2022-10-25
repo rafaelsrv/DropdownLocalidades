@@ -21,7 +21,7 @@ const DropdownBrazilianCities = ({state})=>{
         })
 
     },[state])
-    console.log(search)
+    
     
     return (
       <div>
