@@ -27,7 +27,7 @@ const DropdownBrazilianCities = ({state})=>{
       <div>
       
         <select onChange={procurar} id="city">
-          <option value="">Selecione uma cidade...</option>
+          <option value="">Selecione uma cidade..</option>
           {cities.map((city)=>{
             const{id, nome} = city;
             
