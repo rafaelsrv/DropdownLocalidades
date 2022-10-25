@@ -2,15 +2,18 @@
 
 const SearchButton= ({City}) =>{
 
-
+    const openInNewTab = url => {
+        window.open(url, '_blank', 'noopener,noreferrer');
+      };
 
     return(
         <div>
         
-        <a href="https://google.com" target="_blank" rel="noreferrer">
-        <button onClick={SearchButton}>Pesquisar sobre {City}</button>
-        </a>
+        <button onClick={() => openInNewTab(`https://pt.wikipedia.org/wiki/${City}`)}>
+        Pesquisar sobre {City}
+        </button>
         
+
         </div>
     )
 
