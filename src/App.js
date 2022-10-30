@@ -15,7 +15,7 @@ function App() {
     setFormValues({...formValues, [name]:value})
   }
   console.log(formValues)
-  console.log(formValues)
+  
   
  
 
