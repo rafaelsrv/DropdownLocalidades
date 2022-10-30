@@ -5,6 +5,7 @@ import DropdownBrazilianCities from './components/Forms/DropdownBrazilianCities'
 import SearchButton from './components/SearchButton';
 import Navbar from './components/Navbar/Navbar';
 import {BrowserRouter as Router, Route, Link, Routes} from 'react-router-dom'
+import Item from './components/Forms/Pages/item';
 
 
 function App() {
@@ -25,6 +26,9 @@ function App() {
     <Router>
     <div className="container">
       <Navbar/>
+      <Routes>
+        <Route exact path = '/item' element={<Item/>}/>
+      </Routes>
       <form>
         <label htmlFor="state">Estado:</label>
         <DropdownBrazilianStates onChange={handleInputChange}/>
