@@ -3,6 +3,8 @@ import './App.css';
 import DropdownBrazilianStates from './components/Forms/DropdownBrazilianStates';
 import DropdownBrazilianCities from './components/Forms/DropdownBrazilianCities';
 import SearchButton from './components/SearchButton';
+import Navbar from './components/Navbar/Navbar';
+import {BrowserRouter as Router, Route, Link, Routes} from 'react-router-dom'
 
 
 function App() {
@@ -20,7 +22,9 @@ function App() {
  
 
   return (
+    <Router>
     <div className="container">
+      <Navbar/>
       <form>
         <label htmlFor="state">Estado:</label>
         <DropdownBrazilianStates onChange={handleInputChange}/>
@@ -32,6 +36,7 @@ function App() {
         
       
     </div>
+    </Router>
   );
 }
 
